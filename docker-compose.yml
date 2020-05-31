@@ -1,0 +1,23 @@
+version: "3.7"
+
+services:
+
+    memory-game-backend:
+        build: 
+            context: backend
+            dockerfile: docker/Dockerfile
+        restart: unless-stopped
+        volumes:
+            - ./backend:/opt/app:delegated
+        ports: 
+            - '3000:3000'
+
+    memory-game-frontend:
+        build: 
+            context: frontend
+            dockerfile: docker/Dockerfile
+        restart: unless-stopped
+        volumes:
+            - ./frontend:/opt/app:delegated
+        ports: 
+            - '8080:8080'
