@@ -49,6 +49,7 @@ Running with docker compose
 * on the root folder:
     * `docker-compose run up -d --build`
     * this will build both images and should make them available on the same urls as the previous step.
+    * the frontend here will be available as a build version from the dist folder that will be created during the build step
     
 * to run the tests (note: this will be slower than running locally)
     * after both images are available
