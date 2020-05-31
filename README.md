@@ -39,22 +39,24 @@ After running these commands, both apps should be available on:
 
 Running with Node and Yarn
 * in the backend folder:
+    * `yarn` to install the dependencies
     * `node server.js`
     * it is also possible to run tests with `yarn run test`
 * in the frontend folder:
+    * `yarn` to install the dependencies 
     * `yarn run serve` - this will make available a dev version which has a hot reload in case code is updated
     * it is also possible to run tests with `yarn run test:unit`
     
 Running with docker compose
-* on the root folder:
-    * `docker-compose run up -d --build`
+* in the root folder:
+    * `docker-compose up -d --build`
     * this will build both images and should make them available on the same urls as the previous step.
     * the frontend here will be available as a build version from the dist folder that will be created during the build step
     
 * to run the tests (note: this will be slower than running locally)
     * after both images are available
     * Frontend: ` docker-compose run --rm memory-game-frontend yarn run test:unit`
-    * Frontend: ` docker-compose run --rm memory-game-backend yarn run test`
+    * Backend: ` docker-compose run --rm memory-game-backend yarn run test`
     
     
     
